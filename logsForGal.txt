@@ -1,0 +1,101 @@
+2015-11-13T06:20:01.336748+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2015-11-13T06:20:01.336747+00:00 app[web.1]:     worker.init_process()
+2015-11-13T06:20:01.336748+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2015-11-13T06:20:01.336749+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2015-11-13T06:20:01.336750+00:00 app[web.1]:     self.callable = self.load()
+2015-11-13T06:20:01.336750+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2015-11-13T06:20:01.336751+00:00 app[web.1]:     return self.load_wsgiapp()
+2015-11-13T06:20:01.336752+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2015-11-13T06:20:01.336752+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2015-11-13T06:20:01.336753+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+2015-11-13T06:20:01.336754+00:00 app[web.1]:     __import__(module)
+2015-11-13T06:20:01.336755+00:00 app[web.1]:   File "/app/hellodjango/wsgi.py", line 15, in <module>
+2015-11-13T06:20:01.336755+00:00 app[web.1]:     application = Cling(get_wsgi_application())
+2015-11-13T06:20:01.336757+00:00 app[web.1]:     django.setup()
+2015-11-13T06:20:01.336756+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+2015-11-13T06:20:01.336757+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/__init__.py", line 17, in setup
+2015-11-13T06:20:01.336759+00:00 app[web.1]:     self._setup(name)
+2015-11-13T06:20:01.336760+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 42, in _setup
+2015-11-13T06:20:01.336758+00:00 app[web.1]:     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+2015-11-13T06:20:01.336761+00:00 app[web.1]:     % (desc, ENVIRONMENT_VARIABLE))
+2015-11-13T06:20:01.336759+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 48, in __getattr__
+2015-11-13T06:20:01.336761+00:00 app[web.1]: ImproperlyConfigured: Requested setting LOGGING_CONFIG, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+2015-11-13T06:20:01.337060+00:00 app[web.1]: [2015-11-13 06:20:01 +0000] [11] [INFO] Worker exiting (pid: 11)
+2015-11-13T06:20:01.381722+00:00 app[web.1]: [2015-11-13 06:20:01 +0000] [9] [ERROR] Exception in worker process:
+2015-11-13T06:20:01.381726+00:00 app[web.1]: Traceback (most recent call last):
+2015-11-13T06:20:01.381728+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2015-11-13T06:20:01.381729+00:00 app[web.1]:     worker.init_process()
+2015-11-13T06:20:01.381729+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2015-11-13T06:20:01.381730+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2015-11-13T06:20:01.381731+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2015-11-13T06:20:01.381732+00:00 app[web.1]:     self.callable = self.load()
+2015-11-13T06:20:01.381732+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2015-11-13T06:20:01.381733+00:00 app[web.1]:     return self.load_wsgiapp()
+2015-11-13T06:20:01.381734+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2015-11-13T06:20:01.381734+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2015-11-13T06:20:01.381735+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+2015-11-13T06:20:01.381736+00:00 app[web.1]:     __import__(module)
+2015-11-13T06:20:01.381737+00:00 app[web.1]:   File "/app/hellodjango/wsgi.py", line 15, in <module>
+2015-11-13T06:20:01.381738+00:00 app[web.1]:     application = Cling(get_wsgi_application())
+2015-11-13T06:20:01.381738+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+2015-11-13T06:20:01.381739+00:00 app[web.1]:     django.setup()
+2015-11-13T06:20:01.381740+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/__init__.py", line 17, in setup
+2015-11-13T06:20:01.381741+00:00 app[web.1]:     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+2015-11-13T06:20:01.381742+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 48, in __getattr__
+2015-11-13T06:20:01.381742+00:00 app[web.1]:     self._setup(name)
+2015-11-13T06:20:01.381744+00:00 app[web.1]:     % (desc, ENVIRONMENT_VARIABLE))
+2015-11-13T06:20:01.381743+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 42, in _setup
+2015-11-13T06:20:01.381745+00:00 app[web.1]: ImproperlyConfigured: Requested setting LOGGING_CONFIG, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+2015-11-13T06:20:01.381746+00:00 app[web.1]: Traceback (most recent call last):
+2015-11-13T06:20:01.381746+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2015-11-13T06:20:01.381747+00:00 app[web.1]:     worker.init_process()
+2015-11-13T06:20:01.381747+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2015-11-13T06:20:01.381748+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2015-11-13T06:20:01.381768+00:00 app[web.1]:     self.callable = self.load()
+2015-11-13T06:20:01.381748+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2015-11-13T06:20:01.381769+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2015-11-13T06:20:01.381770+00:00 app[web.1]:     return self.load_wsgiapp()
+2015-11-13T06:20:01.381771+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2015-11-13T06:20:01.381771+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2015-11-13T06:20:01.381772+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+2015-11-13T06:20:01.381772+00:00 app[web.1]:     __import__(module)
+2015-11-13T06:20:01.381773+00:00 app[web.1]:   File "/app/hellodjango/wsgi.py", line 15, in <module>
+2015-11-13T06:20:01.381774+00:00 app[web.1]:     application = Cling(get_wsgi_application())
+2015-11-13T06:20:01.381775+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+2015-11-13T06:20:01.381775+00:00 app[web.1]:     django.setup()
+2015-11-13T06:20:01.381776+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/__init__.py", line 17, in setup
+2015-11-13T06:20:01.381777+00:00 app[web.1]:     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+2015-11-13T06:20:01.381777+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 48, in __getattr__
+2015-11-13T06:20:01.381778+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 42, in _setup
+2015-11-13T06:20:01.381778+00:00 app[web.1]:     self._setup(name)
+2015-11-13T06:20:01.381779+00:00 app[web.1]:     % (desc, ENVIRONMENT_VARIABLE))
+2015-11-13T06:20:01.412586+00:00 app[web.1]: Traceback (most recent call last):
+2015-11-13T06:20:01.381780+00:00 app[web.1]: ImproperlyConfigured: Requested setting LOGGING_CONFIG, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+2015-11-13T06:20:01.412593+00:00 app[web.1]:   File "/app/.heroku/python/bin/gunicorn", line 11, in <module>
+2015-11-13T06:20:01.381876+00:00 app[web.1]: [2015-11-13 06:20:01 +0000] [9] [INFO] Worker exiting (pid: 9)
+2015-11-13T06:20:01.412645+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 74, in run
+2015-11-13T06:20:01.412779+00:00 app[web.1]:     super(Application, self).run()
+2015-11-13T06:20:01.412621+00:00 app[web.1]:     sys.exit(run())
+2015-11-13T06:20:01.412780+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 72, in run
+2015-11-13T06:20:01.412683+00:00 app[web.1]:     WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+2015-11-13T06:20:01.412705+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 189, in run
+2015-11-13T06:20:01.412888+00:00 app[web.1]:     self.halt(reason=inst.reason, exit_status=inst.exit_status)
+2015-11-13T06:20:01.412809+00:00 app[web.1]:     Arbiter(self).run()
+2015-11-13T06:20:01.412992+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 342, in stop
+2015-11-13T06:20:01.412907+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 297, in halt
+2015-11-13T06:20:01.413066+00:00 app[web.1]:     time.sleep(0.1)
+2015-11-13T06:20:01.412831+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 201, in run
+2015-11-13T06:20:01.412972+00:00 app[web.1]:     self.stop()
+2015-11-13T06:20:01.413087+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 214, in handle_chld
+2015-11-13T06:20:01.413147+00:00 app[web.1]:     self.reap_workers()
+2015-11-13T06:20:01.413152+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 459, in reap_workers
+2015-11-13T06:20:01.413243+00:00 app[web.1]:     raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2015-11-13T06:20:01.413301+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2015-11-13T06:20:02.234082+00:00 heroku[web.1]: Process exited with status 1
+2015-11-13T06:20:02.583523+00:00 heroku[web.1]: State changed from up to crashed
+2015-11-13T06:20:04.797727+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=murmuring-brook-2786.herokuapp.com request_id=b4f1faca-4e01-40b3-927b-2702781ad1e4 fwd="72.253.136.247" dyno= connect= service= status=503 bytes=
+2015-11-13T06:20:05.661074+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=murmuring-brook-2786.herokuapp.com request_id=2250b7a2-24b0-4323-9a02-00dc946c85e3 fwd="72.253.136.247" dyno= connect= service= status=503 bytes=
+2015-11-13T06:25:00.301411+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=murmuring-brook-2786.herokuapp.com request_id=fca0af02-0f8b-4c74-a4f0-6389689bd4d8 fwd="72.253.136.247" dyno= connect= service= status=503 bytes=
+2015-11-13T06:25:00.703627+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=murmuring-brook-2786.herokuapp.com request_id=efe209fc-62c9-46b5-96bf-0f64db7aaf98 fwd="72.253.136.247" dyno= connect= service= status=503 bytes=
+2015-11-13T06:25:02.864769+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=murmuring-brook-2786.herokuapp.com request_id=47d21754-c0ac-4b24-a832-e57cee14499e fwd="72.253.136.247" dyno= connect= service= status=503 bytes=
+2015-11-13T06:25:03.218877+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=murmuring-brook-2786.herokuapp.com request_id=dc6a644c-7c13-4663-8f6d-8502a30d5ecd fwd="72.253.136.247" dyno= connect= service= status=503 bytes=
